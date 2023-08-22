@@ -1,0 +1,40 @@
+[2023-08-22T05:01:10.882+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_python_operator.virtualenv_python manual__2023-08-22T05:01:03.049870+00:00 [queued]>
+[2023-08-22T05:01:10.893+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_python_operator.virtualenv_python manual__2023-08-22T05:01:03.049870+00:00 [queued]>
+[2023-08-22T05:01:10.893+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-08-22T05:01:10.908+0000] {taskinstance.py:1327} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): virtualenv_python> on 2023-08-22 05:01:03.049870+00:00
+[2023-08-22T05:01:10.913+0000] {standard_task_runner.py:57} INFO - Started process 4958 to run task
+[2023-08-22T05:01:10.917+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'example_python_operator', 'virtualenv_python', 'manual__2023-08-22T05:01:03.049870+00:00', '--job-id', '24', '--raw', '--subdir', '/home/***/.local/lib/python3.7/site-packages/***/example_dags/example_python_operator.py', '--cfg-path', '/tmp/tmp_5wpgj4v']
+[2023-08-22T05:01:10.919+0000] {standard_task_runner.py:85} INFO - Job 24: Subtask virtualenv_python
+[2023-08-22T05:01:10.971+0000] {task_command.py:410} INFO - Running <TaskInstance: example_python_operator.virtualenv_python manual__2023-08-22T05:01:03.049870+00:00 [running]> on host 908f67153615
+[2023-08-22T05:01:11.071+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_python_operator' AIRFLOW_CTX_TASK_ID='virtualenv_python' AIRFLOW_CTX_EXECUTION_DATE='2023-08-22T05:01:03.049870+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-08-22T05:01:03.049870+00:00'
+[2023-08-22T05:01:11.073+0000] {process_utils.py:181} INFO - Executing cmd: /usr/local/bin/python -m virtualenv /tmp/venvczz9hmey
+[2023-08-22T05:01:11.080+0000] {process_utils.py:185} INFO - Output:
+[2023-08-22T05:01:12.128+0000] {process_utils.py:189} INFO - created virtual environment CPython3.7.17.final.0-64 in 277ms
+[2023-08-22T05:01:12.129+0000] {process_utils.py:189} INFO -   creator CPython3Posix(dest=/tmp/venvczz9hmey, clear=False, no_vcs_ignore=False, global=False)
+[2023-08-22T05:01:12.129+0000] {process_utils.py:189} INFO -   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2023-08-22T05:01:12.133+0000] {process_utils.py:189} INFO -     added seed packages: pip==23.1, setuptools==67.6.1, wheel==0.40.0
+[2023-08-22T05:01:12.133+0000] {process_utils.py:189} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2023-08-22T05:01:12.162+0000] {process_utils.py:181} INFO - Executing cmd: /tmp/venvczz9hmey/bin/pip install -r /tmp/venvczz9hmey/requirements.txt
+[2023-08-22T05:01:12.168+0000] {process_utils.py:185} INFO - Output:
+[2023-08-22T05:01:13.498+0000] {process_utils.py:189} INFO - Collecting colorama==0.4.0 (from -r /tmp/venvczz9hmey/requirements.txt (line 1))
+[2023-08-22T05:01:13.500+0000] {process_utils.py:189} INFO -   Using cached colorama-0.4.0-py2.py3-none-any.whl (21 kB)
+[2023-08-22T05:01:13.569+0000] {process_utils.py:189} INFO - Installing collected packages: colorama
+[2023-08-22T05:01:13.588+0000] {process_utils.py:189} INFO - Successfully installed colorama-0.4.0
+[2023-08-22T05:01:13.842+0000] {process_utils.py:189} INFO - 
+[2023-08-22T05:01:13.843+0000] {process_utils.py:189} INFO - [notice] A new release of pip is available: 23.1 -> 23.2.1
+[2023-08-22T05:01:13.843+0000] {process_utils.py:189} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2023-08-22T05:01:13.923+0000] {process_utils.py:181} INFO - Executing cmd: /tmp/venvczz9hmey/bin/python /tmp/venvczz9hmey/script.py /tmp/venvczz9hmey/script.in /tmp/venvczz9hmey/script.out /tmp/venvczz9hmey/string_args.txt
+[2023-08-22T05:01:13.930+0000] {process_utils.py:185} INFO - Output:
+[2023-08-22T05:01:14.017+0000] {process_utils.py:189} INFO - [31msome red text
+[2023-08-22T05:01:14.018+0000] {process_utils.py:189} INFO - [42mand with a green background
+[2023-08-22T05:01:14.018+0000] {process_utils.py:189} INFO - [2mand in dim text
+[2023-08-22T05:01:14.018+0000] {process_utils.py:189} INFO - [0m
+[2023-08-22T05:01:14.018+0000] {process_utils.py:189} INFO - [2mPlease wait...
+[2023-08-22T05:01:15.018+0000] {process_utils.py:189} INFO - [2mPlease wait...
+[2023-08-22T05:01:16.018+0000] {process_utils.py:189} INFO - [2mPlease wait...
+[2023-08-22T05:01:17.020+0000] {process_utils.py:189} INFO - [2mPlease wait...
+[2023-08-22T05:01:18.021+0000] {process_utils.py:189} INFO - Finished
+[2023-08-22T05:01:18.046+0000] {python.py:183} INFO - Done. Returned value was: None
+[2023-08-22T05:01:18.056+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=example_python_operator, task_id=virtualenv_python, execution_date=20230822T050103, start_date=20230822T050110, end_date=20230822T050118
+[2023-08-22T05:01:18.111+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-08-22T05:01:18.125+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check
